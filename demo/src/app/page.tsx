@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { AnnouncementBadge } from '@/components/elements/announcement-badge'
 import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
@@ -15,6 +16,9 @@ export default function Page() {
       {/* Hero with Bee Image */}
       <HeroLeftAlignedWithDemo
         id="hero"
+        eyebrow={
+          <AnnouncementBadge href="/zum-honig" text="Frischer Honig von unseren Imkern verfügbar" cta="Mehr erfahren" />
+        }
         headline="Willkommen beim Bienenzuchtverein Massenhausen"
         subheadline={
           <p>

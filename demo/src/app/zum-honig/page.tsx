@@ -3,14 +3,14 @@ import {
   Feature,
   FeaturesStackedAlternatingWithDemos,
 } from '@/components/sections/features-stacked-alternating-with-demos'
-import { HeroCenteredWithDemo } from '@/components/sections/hero-centered-with-demo'
+import { HeroLeftAlignedWithPhoto } from '@/components/sections/hero-left-aligned-with-photo'
 import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
 
 export default function Page() {
   return (
     <>
       {/* Hero - About Honey */}
-      <HeroCenteredWithDemo
+      <HeroLeftAlignedWithPhoto
         id="hero"
         headline="Regionaler Honig von unseren Imkern"
         subheadline={
@@ -21,16 +21,15 @@ export default function Page() {
             Blüten und der Natur unserer Heimat.
           </p>
         }
-        demo={
+        photo={
           <Image
             src="/bees.jpg"
             alt="Bienen bei der Arbeit"
             width={1920}
             height={1080}
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto"
           />
         }
-        footer={null}
       />
 
       {/* Beekeepers - Honey Offerings */}

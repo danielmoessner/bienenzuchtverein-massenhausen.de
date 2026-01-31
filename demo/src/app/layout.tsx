@@ -46,10 +46,7 @@ export default function RootLayout({
                 <NavbarLink href="/verein">Verein & Vorstand</NavbarLink>
                 <NavbarLink href="/jungimker">Jungimker</NavbarLink>
                 <NavbarLink href="/termine" className="sm:hidden">
-                  Termine
-                </NavbarLink>
-                <NavbarLink href="/kurse" className="sm:hidden">
-                  Kurse
+                  Termine & Kurse
                 </NavbarLink>
                 <NavbarLink href="/downloads" className="sm:hidden">
                   Downloads
@@ -67,10 +64,7 @@ export default function RootLayout({
             actions={
               <>
                 <NavbarLink href="/termine" className="max-sm:hidden lg:max-xl:hidden">
-                  Termine
-                </NavbarLink>
-                <NavbarLink href="/kurse" className="max-sm:hidden lg:max-xl:hidden">
-                  Kurse
+                  Termine & Kurse
                 </NavbarLink>
                 <NavbarLink href="/downloads" className="max-sm:hidden lg:max-xl:hidden">
                   Downloads
@@ -92,8 +86,7 @@ export default function RootLayout({
                 <FooterLink href="/">Startseite</FooterLink>
                 <FooterLink href="/verein">Verein & Vorstand</FooterLink>
                 <FooterLink href="/jungimker">Jungimker</FooterLink>
-                <FooterLink href="/termine">Termine</FooterLink>
-                <FooterLink href="/kurse">Kurse</FooterLink>
+                <FooterLink href="/termine">Termine & Kurse</FooterLink>
                 <FooterLink href="/downloads">Downloads</FooterLink>
                 <FooterLink href="/kontakt">Kontakt</FooterLink>
                 <FooterLink href="/zum-honig">Zum Honig</FooterLink>

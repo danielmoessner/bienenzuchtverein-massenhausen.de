@@ -3,14 +3,14 @@ import { Section } from '@/components/elements/section'
 export default function Page() {
   return (
     <>
-      {/* Hero - Termine */}
-      <Section id="termine">
+      {/* Hero - Termine & Kurse */}
+      <Section id="termine-kurse">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 dark:text-white sm:text-5xl">
-            Termine
+            Termine & Kurse
           </h1>
           <p className="mt-6 text-lg/8 text-honey-700 dark:text-honey-400">
-            Hier finden Sie alle wichtigen Termine unseres Vereins.
+            Hier finden Sie alle wichtigen Termine und Kursangebote unseres Vereins.
           </p>
         </div>
       </Section>
@@ -45,8 +45,38 @@ export default function Page() {
         </div>
       </Section>
 
+      {/* Kurse List */}
+      <Section id="kurse-list">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-display text-2xl font-medium tracking-tight text-honey-950 dark:text-white">
+            Unsere Kurse
+          </h2>
+          <p className="mt-4 text-base/7 text-honey-700 dark:text-honey-400">
+            Derzeit sind keine Kurse verfügbar. In Kürze finden Sie hier Informationen zu:
+          </p>
+          <ul className="mt-6 space-y-3 text-base/7 text-honey-700 dark:text-honey-400">
+            <li className="flex gap-3">
+              <span className="text-honey-500">•</span>
+              <span>Anfängerkurs für Neu- und Jungimker</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-honey-500">•</span>
+              <span>Fortgeschrittenenkurse</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-honey-500">•</span>
+              <span>Workshops zu speziellen Themen</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-honey-500">•</span>
+              <span>Praktische Schulungen</span>
+            </li>
+          </ul>
+        </div>
+      </Section>
+
       {/*
-        Future extension pattern - replace the list above with actual event cards:
+        Future extension pattern - replace the lists above with actual event/course cards:
 
         <Section id="termine-list">
           <div className="mx-auto max-w-3xl">
