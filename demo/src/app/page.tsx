@@ -7,6 +7,7 @@ import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
 import { Feature, FeaturesTwoColumnWithDemos } from '@/components/sections/features-two-column-with-demos'
 import { HeroLeftAlignedWithDemo } from '@/components/sections/hero-left-aligned-with-demo'
 import { Stat, StatsWithGraph } from '@/components/sections/stats-with-graph'
+import { ChevronIcon } from '@/components/icons/chevron-icon'
 
 export default function Page() {
   return (
@@ -112,9 +113,14 @@ export default function Page() {
           </p>
         }
         cta={
-          <ButtonLink href="/zum-honig" size="lg">
-            Zum Honig
-          </ButtonLink>
+          <div className="flex items-center gap-4">
+            <ButtonLink href="/zum-honig" size="lg">
+              Zum Honig
+            </ButtonLink>
+             <PlainButtonLink href="#" size="lg">
+                Mehr erfahren <ChevronIcon />
+              </PlainButtonLink>
+          </div>
         }
       />
     </>
