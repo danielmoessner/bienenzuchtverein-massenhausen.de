@@ -16,6 +16,22 @@ It consists of the following pages:
 - Impressum
 - Datenschutz
 
+## Startseite Sections
+
+Header with suitable text
+Image of the honeybees (bees.jpg)
+Same existing box with left link to Termine right link to Kurse
+Short Intro section about how to become Jungimker with link to the more details page
+CTA to the Zum Honig
+Footer (quick one sentence text + pages links + impressum und datenschutz)
+
+## Verein & Vorstand Sections
+
+Heading Text and Image
+
+
+
+
 Content from the existing website:
 
 ## Verein
