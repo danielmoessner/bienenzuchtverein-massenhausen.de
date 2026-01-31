@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ButtonLink } from '@/components/elements/button'
 import {
   Feature,
   FeaturesStackedAlternatingWithDemos,
@@ -20,6 +21,11 @@ export default function Page() {
             aus der Region Massenhausen. Jeder Honig ist ein Unikat, geprägt von den
             Blüten und der Natur unserer Heimat.
           </p>
+        }
+        cta={
+          <ButtonLink href="#imker" size="lg">
+            Zum Honig
+          </ButtonLink>
         }
         photo={
           <Image
