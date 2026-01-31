@@ -5,8 +5,7 @@ This is a website for the Bienenzuchtverein Massenhausen.
 It consists of the following pages:
 
 - Startseite
-- Verein
-- Vorstand
+- Verein & Vorstand
 - Jungimker
 - Termine
 - Kurse

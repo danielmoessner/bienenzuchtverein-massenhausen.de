@@ -43,8 +43,7 @@ export default function RootLayout({
             links={
               <>
                 <NavbarLink href="/">Startseite</NavbarLink>
-                <NavbarLink href="/verein">Verein</NavbarLink>
-                <NavbarLink href="/vorstand">Vorstand</NavbarLink>
+                <NavbarLink href="/verein">Verein & Vorstand</NavbarLink>
                 <NavbarLink href="/jungimker">Jungimker</NavbarLink>
                 <NavbarLink href="/termine" className="sm:hidden">
                   Termine
@@ -91,8 +90,7 @@ export default function RootLayout({
             links={
               <>
                 <FooterLink href="/">Startseite</FooterLink>
-                <FooterLink href="/verein">Verein</FooterLink>
-                <FooterLink href="/vorstand">Vorstand</FooterLink>
+                <FooterLink href="/verein">Verein & Vorstand</FooterLink>
                 <FooterLink href="/jungimker">Jungimker</FooterLink>
                 <FooterLink href="/termine">Termine</FooterLink>
                 <FooterLink href="/kurse">Kurse</FooterLink>
