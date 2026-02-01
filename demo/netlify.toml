@@ -9,7 +9,7 @@
   targetPort = 3000
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "24"
 
 [[redirects]]
   from = "/api/*"
