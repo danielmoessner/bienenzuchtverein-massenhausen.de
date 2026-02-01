@@ -119,10 +119,10 @@ export default function Page() {
                   <p className="text-honey-700 dark:text-honey-400">
                     Website:{' '}
                     <a
-                      href="https://imkerei-schmidt.de"
+                      href="https://imkerei-beispiel.de"
                       className="underline hover:text-honey-950 dark:hover:text-white"
                     >
-                      imkerei-schmidt.de
+                      imkerei-beispiel.de
                     </a>
                   </p>
                 </div>
