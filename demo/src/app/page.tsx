@@ -12,7 +12,6 @@ import { ChevronIcon } from '@/components/icons/chevron-icon'
 export default function Page() {
   return (
     <>
-      {/* Hero with Bee Image */}
       <HeroLeftAlignedWithDemo
         id="hero"
         eyebrow={
@@ -20,17 +19,10 @@ export default function Page() {
         }
         headline="Willkommen beim Bienenzuchtverein Massenhausen"
         subheadline={
-          <>
-            <p>
-              Der Bienenzuchtverein Massenhausen steht für eine verantwortungsvolle und praxisnahe Ausbildung von Imkerinnen und Imkern. Unser Ziel ist es, Interessierte in einer offenen Gemeinschaft Schritt für Schritt zu guten Imkern zu begleiten - vom ersten Kontakt mit der Imkerei bis zur sicheren eigenständigen Bienenhaltung.
-            </p>
-            <p>
-              Der Einstieg beginnt mit einem Neulingskurs, wird durch Probeimkern ergänzt und setzt sich fort im regelmäßigen Stammtisch mit Erfahrungsaustausch. Darüber hinaus bieten wir Fachvorträge, gemeinsame Aktivitäten und gesellige Veranstaltungen wie Grillabende, bei denen der persönliche Austausch im Mittelpunkt steht.
-            </p>
-            <p>
-              Ob Sie ganz neu in die Imkerei einsteigen oder Ihr Wissen vertiefen möchten – im Bienenzuchtverein Massenhausen finden Sie Wissen, Praxis und Gemeinschaft rund um die Bienenhaltung.
-            </p>
-          </>
+          <p>
+            Seit 1905 widmen wir uns der Förderung der Imkerei und des Naturschutzes. Mit über 120 Mitgliedern bieten
+            wir eine lebendige Gemeinschaft für Imker jeden Erfahrungsstands – von Anfängerkursen bis zu Fachvorträgen.
+          </p>
         }
         cta={
           <div className="flex items-center gap-4">
@@ -54,7 +46,7 @@ export default function Page() {
         }
         footer={null}
       />
-      {/* Two-Box Section (Termine/Kurse) */}
+      
       <FeaturesTwoColumnWithDemos
         id="termine-kurse"
         features={
@@ -93,7 +85,7 @@ export default function Page() {
           </>
         }
       />
-      {/* Jungimker Section with Stats */}
+      
       <StatsWithGraph
         id="jungimker"
         eyebrow="Nachwuchsförderung"
@@ -112,7 +104,7 @@ export default function Page() {
         <Stat stat="120+" text="Mitglieder in unserem lebendigen Verein" />
         <Stat stat="1905" text="Gegründet – über 100 Jahre Tradition" />
       </StatsWithGraph>
-      {/* Call To Action */}
+      
       <CallToActionSimple
         id="call-to-action"
         headline="Honig von unseren Mitgliedern"
