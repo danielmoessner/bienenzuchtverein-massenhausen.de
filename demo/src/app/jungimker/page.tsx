@@ -8,28 +8,31 @@ export default function Page() {
     <>
       <HeroLeftAlignedWithPhoto
         id="hero"
+        eyebrow="Kurs für Anfänger in der Imkerei"
         headline="Imker werden"
         subheadline={
           <>
             <p>
-              Dem Bienenzuchtverein Massenhausen ist es ein Anliegen, dass die Bienenhaltung
-              von gut ausgebildeten Imkern mit umfassenden Kenntnissen durchgeführt wird.
-              Für Interessierte bieten wir einen Anfängerkurs für Neu- und Jungimker an.
+              Wie sieht der richtige Einstieg in die Imkerei aus? Was brauche ich? Was muss ich wissen?
             </p>
             <p>
-              Begleitend zum Anfängerkurs steht auch eine begrenzte Anzahl an Plätzen für
-              das Imkern auf Probe zur Verfügung.
+              Sie interessieren sich für die Bienenhaltung und stellen sich solche oder ähnliche Fragen!
             </p>
             <p>
-              Sie wollen in die Imkerei einsteigen oder Sie sind sich noch nicht sicher, ob
-              die Bienenhaltung für Sie das richtige Hobby ist?
+              Dann sind Sie in unserem Anfängerkurs richtig aufgehoben. Hier bekommen Sie an sieben Kurstagen alle notwendigen Informationen um mit dem Imkern zu beginnen:
             </p>
             <p>
-              Werden Sie Imker auf Probe und stellen Sie fest, ob Sie Spaß an der Imkerei haben.
-              Das Probeimkern in unserem Verein ermöglicht Ihnen, das Hobby Imkerei kennen zu lernen.
-              Wenn Sie glauben, dass Sie Spaß an aktivem Naturschutz durch Bienen und dem Umgang mit
-              Bienen haben oder gerne ihren eigenen Honig ernten möchten, dann werden Sie Probeimker
-              im Bienenzuchtverein Massenhausen.
+              Sie erhalten einen Überblick über die Rechtsgrundlagen und Formalitäten, die erledigt werden müssen. Auch Materialkunde  und notwendige Anschaffungen werden ausführlich besprochen, so dass Sie wissen, was bereits am Anfang angeschafft werden sollte und was Sie noch nicht gleich am Anfang benötigen. Hier bietet zur Unterstützung der Bienenzuchtverein Massenhausen für seine Mitglieder auch Geräte wie z.B. Schleuder oder Dampfwachsschmelzer, aus seinem Gerätepool zur Ausleihe an.
+            </p>
+            <p>
+              Ein großer Teil des Kurses beschäftigt sich mit dem notwendigen Wissen zur Bienenhaltung: Sie bekommen Grundwissen zur Arbeit mit Bienen, deren Bedürfnisse und notwendige Arbeiten über das Jahr.
+            </p>
+            <p>
+              Mit allen diesen Informationen sind Sie gut gewappnet, um selbst mit der Bienenhaltung durchzustarten und mit einem faszinierenden Hobby zu beginnen.
+            </p>
+            <p>
+              Wenn Sie Interesse am Anfängerkurs haben, melden Sie sich bei oder einfach über: {' '}
+              <a className='underline hover:text-honey-950 dark:hover:text-white' href="mailto:kursanmeldung@bienenzuchtverein-massenhausen.de">kursanmeldung@bienenzuchtverein-massenhausen.de</a>.
             </p>
           </>
         }
@@ -65,9 +68,9 @@ export default function Page() {
         }
         cta={
           <div className="flex items-center gap-4">
-          <ButtonLink href="mailto:kursanmeldung@bienenzuchtverein-massenhausen.de" size="lg">
-            Jetzt registrieren
-          </ButtonLink>
+            <ButtonLink href="mailto:kursanmeldung@bienenzuchtverein-massenhausen.de" size="lg">
+              Jetzt registrieren
+            </ButtonLink>
           </div>
         }
       />
