@@ -5,7 +5,6 @@ import { TeamFourColumnGrid, TeamMember } from '@/components/sections/team-four-
 export default function Page() {
   return (
     <>
-      {/* Hero - Association Information */}
       <HeroLeftAlignedWithPhoto
         id="hero"
         headline="Über den Bienenzuchtverein Massenhausen"
@@ -37,7 +36,6 @@ export default function Page() {
         }
       />
 
-      {/* Leadership Team */}
       <TeamFourColumnGrid
         id="team"
         headline="Unser Vorstand"
@@ -58,6 +56,7 @@ export default function Page() {
           }
           name="Dr. Elke Frenzel"
           byline="1. Vorstand"
+          phone="08165 909632"
         />
         <TeamMember
           img={
@@ -70,6 +69,7 @@ export default function Page() {
           }
           name="Markus Besl"
           byline="2. Vorstand"
+          phone="08165 981939"
         />
         <TeamMember
           img={
@@ -94,6 +94,7 @@ export default function Page() {
           }
           name="Alexander Frenzel"
           byline="Schriftführer"
+          phone="08165 909632"
         />
       </TeamFourColumnGrid>
     </>

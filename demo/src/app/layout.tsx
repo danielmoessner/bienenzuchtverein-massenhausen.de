@@ -45,6 +45,9 @@ export default function RootLayout({
                 <NavbarLink href="/">Startseite</NavbarLink>
                 <NavbarLink href="/verein">Verein & Vorstand</NavbarLink>
                 <NavbarLink href="/jungimker">Jungimker</NavbarLink>
+                <NavbarLink href="/leihgeraete" className="sm:hidden">
+                  Leihgeräte
+                </NavbarLink>
                 <NavbarLink href="/termine" className="sm:hidden">
                   Termine & Kurse
                 </NavbarLink>
@@ -63,6 +66,9 @@ export default function RootLayout({
             }
             actions={
               <>
+                <NavbarLink href="/leihgeraete" className="max-sm:hidden lg:max-xl:hidden">
+                  Leihgeräte
+                </NavbarLink>
                 <NavbarLink href="/termine" className="max-sm:hidden lg:max-xl:hidden">
                   Termine & Kurse
                 </NavbarLink>
@@ -86,6 +92,7 @@ export default function RootLayout({
                 <FooterLink href="/">Startseite</FooterLink>
                 <FooterLink href="/verein">Verein & Vorstand</FooterLink>
                 <FooterLink href="/jungimker">Jungimker</FooterLink>
+                <FooterLink href="/leihgeraete">Leihgeräte</FooterLink>
                 <FooterLink href="/termine">Termine & Kurse</FooterLink>
                 <FooterLink href="/downloads">Downloads</FooterLink>
                 <FooterLink href="/kontakt">Kontakt</FooterLink>

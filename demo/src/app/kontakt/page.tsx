@@ -3,7 +3,6 @@ import { Section } from '@/components/elements/section'
 export default function Page() {
   return (
     <>
-      {/* Hero - Kontakt */}
       <Section id="kontakt">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 dark:text-white sm:text-5xl">
@@ -15,7 +14,6 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* Contact Information */}
       <Section id="kontakt-info">
         <div className="mx-auto max-w-3xl">
           <div className="rounded-lg bg-honey-950/2.5 p-8 dark:bg-white/5">

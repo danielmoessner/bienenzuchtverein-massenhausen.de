@@ -6,7 +6,6 @@ import { HeroLeftAlignedWithPhoto } from '@/components/sections/hero-left-aligne
 export default function Page() {
   return (
     <>
-      {/* Hero - Becoming a Beekeeper */}
       <HeroLeftAlignedWithPhoto
         id="hero"
         headline="Imker werden"
@@ -45,7 +44,6 @@ export default function Page() {
         }
       />
 
-      {/* CTA - Registration */}
       <CallToActionSimple
         id="call-to-action"
         headline="Interesse am Probeimkern?"

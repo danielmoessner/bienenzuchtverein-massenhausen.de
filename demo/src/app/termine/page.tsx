@@ -3,7 +3,6 @@ import { Section } from '@/components/elements/section'
 export default function Page() {
   return (
     <>
-      {/* Hero - Termine & Kurse */}
       <Section id="termine-kurse">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 dark:text-white sm:text-5xl">
@@ -15,7 +14,6 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* Termine List */}
       <Section id="termine-list">
         <div className="mx-auto max-w-3xl">
           <h2 className="font-display text-2xl font-medium tracking-tight text-honey-950 dark:text-white">
@@ -51,15 +49,15 @@ export default function Page() {
           <h2 className="font-display text-2xl font-medium tracking-tight text-honey-950 dark:text-white">
             Unsere Kurse
           </h2>
-          <p className="mt-4 text-base/7 text-honey-700 dark:text-honey-400">
+          {/* <p className="mt-4 text-base/7 text-honey-700 dark:text-honey-400">
             Derzeit sind keine Kurse verfügbar. In Kürze finden Sie hier Informationen zu:
-          </p>
+          </p> */}
           <ul className="mt-6 space-y-3 text-base/7 text-honey-700 dark:text-honey-400">
             <li className="flex gap-3">
               <span className="text-honey-500">•</span>
-              <span>Anfängerkurs für Neu- und Jungimker</span>
+              <span>Neulingskurs Beginn 27. März 2026 (insgesamt 7 Termine)</span>
             </li>
-            <li className="flex gap-3">
+            {/* <li className="flex gap-3">
               <span className="text-honey-500">•</span>
               <span>Fortgeschrittenenkurse</span>
             </li>
@@ -70,7 +68,7 @@ export default function Page() {
             <li className="flex gap-3">
               <span className="text-honey-500">•</span>
               <span>Praktische Schulungen</span>
-            </li>
+            </li> */}
           </ul>
         </div>
       </Section>

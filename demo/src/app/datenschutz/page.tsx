@@ -3,7 +3,6 @@ import { Section } from '@/components/elements/section'
 export default function Page() {
   return (
     <>
-      {/* Hero - Datenschutz */}
       <Section id="datenschutz">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 dark:text-white sm:text-5xl">
@@ -12,10 +11,8 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* Privacy Policy Content */}
       <Section id="datenschutz-content">
         <div className="mx-auto max-w-4xl space-y-8 text-base/7 text-honey-700 dark:text-honey-400">
-          {/* Introduction */}
           <div className="space-y-4">
             <p>
               Wir freuen uns sehr über Ihr Interesse an unserem Verein. Datenschutz hat einen besonders hohen

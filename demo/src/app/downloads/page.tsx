@@ -3,7 +3,6 @@ import { Section } from '@/components/elements/section'
 export default function Page() {
   return (
     <>
-      {/* Hero - Downloads */}
       <Section id="downloads">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 dark:text-white sm:text-5xl">
@@ -15,7 +14,6 @@ export default function Page() {
         </div>
       </Section>
 
-      {/* Downloads List */}
       <Section id="downloads-list">
         <div className="mx-auto max-w-3xl">
           <h2 className="font-display text-2xl font-medium tracking-tight text-honey-950 dark:text-white">

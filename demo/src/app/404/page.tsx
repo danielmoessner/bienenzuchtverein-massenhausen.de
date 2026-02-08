@@ -6,11 +6,11 @@ export default function Page() {
   return (
     <>
       <HeroSimpleCentered
-        headline="Page not found"
-        subheadline={<p>Sorry, but the page you were looking for could not be found.</p>}
+        headline="Seite nicht gefunden"
+        subheadline={<p>Entschuldigung, die von Ihnen gesuchte Seite wurde nicht gefunden.</p>}
         cta={
           <Link href="/">
-            Go back home <ArrowNarrowRightIcon />
+            Zurück zur Startseite <ArrowNarrowRightIcon />
           </Link>
         }
       />

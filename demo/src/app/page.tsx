@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { AnnouncementBadge } from '@/components/elements/announcement-badge'
 import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
@@ -21,10 +20,17 @@ export default function Page() {
         }
         headline="Willkommen beim Bienenzuchtverein Massenhausen"
         subheadline={
-          <p>
-            Seit 1905 widmen wir uns der Förderung der Imkerei und des Naturschutzes. Mit über 120 Mitgliedern bieten
-            wir eine lebendige Gemeinschaft für Imker jeden Erfahrungsstands – von Anfängerkursen bis zu Fachvorträgen.
-          </p>
+          <>
+            <p>
+              Der Bienenzuchtverein Massenhausen steht für eine verantwortungsvolle und praxisnahe Ausbildung von Imkerinnen und Imkern. Unser Ziel ist es, Interessierte in einer offenen Gemeinschaft Schritt für Schritt zu guten Imkern zu begleiten - vom ersten Kontakt mit der Imkerei bis zur sicheren eigenständigen Bienenhaltung.
+            </p>
+            <p>
+              Der Einstieg beginnt mit einem Neulingskurs, wird durch Probeimkern ergänzt und setzt sich fort im regelmäßigen Stammtisch mit Erfahrungsaustausch. Darüber hinaus bieten wir Fachvorträge, gemeinsame Aktivitäten und gesellige Veranstaltungen wie Grillabende, bei denen der persönliche Austausch im Mittelpunkt steht.
+            </p>
+            <p>
+              Ob Sie ganz neu in die Imkerei einsteigen oder Ihr Wissen vertiefen möchten – im Bienenzuchtverein Massenhausen finden Sie Wissen, Praxis und Gemeinschaft rund um die Bienenhaltung.
+            </p>
+          </>
         }
         cta={
           <div className="flex items-center gap-4">
@@ -121,9 +127,9 @@ export default function Page() {
             <ButtonLink href="/zum-honig" size="lg">
               Zum Honig
             </ButtonLink>
-             <PlainButtonLink href="#" size="lg">
-                Mehr erfahren <ChevronIcon />
-              </PlainButtonLink>
+            <PlainButtonLink href="#" size="lg">
+              Mehr erfahren <ChevronIcon />
+            </PlainButtonLink>
           </div>
         }
       />

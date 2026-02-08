@@ -10,21 +10,22 @@ import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testim
 export default function Page() {
   return (
     <>
-      {/* Hero - About Honey */}
       <HeroLeftAlignedWithPhoto
         id="hero"
-        headline="Regionaler Honig von unseren Imkern"
+        headline="Produkte von unseren Imkern"
         subheadline={
-          <p>
-            Entdecken Sie die Vielfalt und Qualität unseres regionalen Honigs. Unsere
-            Vereinsmitglieder produzieren mit viel Liebe und Erfahrung hochwertigen Honig
-            aus der Region Massenhausen. Jeder Honig ist ein Unikat, geprägt von den
-            Blüten und der Natur unserer Heimat.
-          </p>
+          <>
+            <p>
+              Auf dieser Seite stellen unsere Mitglieder ihre imkerlichen Erzeugnisse vor. Die angebotenen Produkte stammen aus regionaler, verantwortungsvoller Imkerei und stehen für hohe Qualität, Sorgfalt und Fachwissen. Vom Honig über Produkte aus Neben­erzeugnissen bis hin zu Königinnen oder Bienenvölkern spiegeln sie die Vielfalt unserer Vereinsarbeit wider.
+            </p>
+            <p>
+              Die jeweiligen Angebote werden direkt von den Imkern selbst bereitgestellt. Je nach Anbieter finden Sie hier eine Verlinkung zur eigenen Homepage oder die Möglichkeit zur direkten Kontaktaufnahme per Telefon oder E-Mail.
+            </p>
+          </>
         }
         cta={
           <ButtonLink href="#imker" size="lg">
-            Zum Honig
+            Zu den Produkten
           </ButtonLink>
         }
         photo={
@@ -38,10 +39,9 @@ export default function Page() {
         }
       />
 
-      {/* Beekeepers - Honey Offerings */}
       <FeaturesStackedAlternatingWithDemos
         id="imker"
-        headline="Unsere Imker und ihre Honigsorten"
+        headline="Unsere Imker und ihre Produkte"
         subheadline={
           <p>
             Jeder unserer Imker bringt seine eigene Expertise und Leidenschaft in die
@@ -135,7 +135,6 @@ export default function Page() {
         }
       />
 
-      {/* Testimonial - Customer Review */}
       <TestimonialTwoColumnWithLargePhoto
         id="testimonial"
         quote={
