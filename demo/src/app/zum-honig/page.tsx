@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import { ButtonLink } from '@/components/elements/button'
+import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
 import {
   Feature,
   FeaturesStackedAlternatingWithDemos,
 } from '@/components/sections/features-stacked-alternating-with-demos'
 import { HeroLeftAlignedWithPhoto } from '@/components/sections/hero-left-aligned-with-photo'
 import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
+import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 
 export default function Page() {
   return (
@@ -24,9 +25,15 @@ export default function Page() {
           </>
         }
         cta={
-          <ButtonLink href="#imker" size="lg">
-            Zu den Produkten
-          </ButtonLink>
+          <div className="flex items-center gap-4">
+            <ButtonLink href="#imker" size="lg">
+              Zum Honig
+            </ButtonLink>
+
+            <PlainButtonLink href="#imker" size="lg">
+              Zu den Produkten <ArrowNarrowRightIcon />
+            </PlainButtonLink>
+          </div>
         }
         photo={
           <Image
@@ -153,8 +160,8 @@ export default function Page() {
             className="w-full h-auto"
           />
         }
-        name="Familie Weber"
-        byline="Langjährige Honig-Liebhaber"
+        name=""
+        byline=""
       />
     </>
   )
