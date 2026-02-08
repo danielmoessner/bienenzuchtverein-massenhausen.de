@@ -37,7 +37,7 @@ export default function Page() {
         }
         photo={
           <Image
-            src="/probeimkern.png"
+            src="/biene.jpeg"
             alt="Probeimkern im Bienenzuchtverein Massenhausen"
             width={1800}
             height={945}
