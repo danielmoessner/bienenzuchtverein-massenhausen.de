@@ -55,32 +55,31 @@ export default function Page() {
               demo={<div className="aspect-[16/9] bg-honey-300/20 dark:bg-honey-700/20" />}
               headline={
                 <Link href="/termine" className="hover:underline">
-                  Termine
+                  Nächsten Termine
                 </Link>
               }
               subheadline={
-                <p>
-                  Vereinstreffen, Fachvorträge und gemeinsame Aktivitäten. Bleiben Sie informiert über unsere
-                  kommenden Veranstaltungen.
-                </p>
+                <ul>
+                  <li>6. März 2026, 19:00 Uhr, JHV im Hepting Massenhausen</li>
+                  <li>Neulingskurs Beginn 27. März 2026 (insgesamt 7 Termine)</li>
+                </ul>
               }
-              cta={<ButtonLink href="/termine">Zu den Terminen</ButtonLink>}
+              cta={<ButtonLink href="/termine">Zu allen Terminen</ButtonLink>}
             />
 
             <Feature
               demo={<div className="aspect-[16/9] bg-honey-300/20 dark:bg-honey-700/20" />}
               headline={
-                <Link href="/kurse" className="hover:underline">
-                  Kurse
+                <Link href="/leihgeraete" className="hover:underline">
+                  Leihgeräte
                 </Link>
               }
               subheadline={
                 <p>
-                  Anfängerkurse für Neu- und Jungimker. Lernen Sie die faszinierende Welt der Bienenhaltung von Grund
-                  auf kennen.
+                  Leihgeräte für Imker. Entdecken Sie unsere Auswahl an hochwertigen Geräten, die Sie für Ihre Imkerei ausleihen können.
                 </p>
               }
-              cta={<ButtonLink href="/kurse">Zu den Kursen</ButtonLink>}
+              cta={<ButtonLink href="/leihgeraete">Zu den Leihgeräten</ButtonLink>}
             />
           </>
         }
