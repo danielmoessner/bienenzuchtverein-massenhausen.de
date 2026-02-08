@@ -49,7 +49,7 @@ export default function RootLayout({
                   Leihgeräte
                 </NavbarLink>
                 <NavbarLink href="/termine" className="sm:hidden">
-                  Termine & Kurse
+                  Termine
                 </NavbarLink>
                 <NavbarLink href="/downloads" className="sm:hidden">
                   Downloads
@@ -70,7 +70,7 @@ export default function RootLayout({
                   Leihgeräte
                 </NavbarLink>
                 <NavbarLink href="/termine" className="max-sm:hidden lg:max-xl:hidden">
-                  Termine & Kurse
+                  Termine
                 </NavbarLink>
                 <NavbarLink href="/downloads" className="max-sm:hidden lg:max-xl:hidden">
                   Downloads
@@ -93,7 +93,7 @@ export default function RootLayout({
                 <FooterLink href="/verein">Verein & Vorstand</FooterLink>
                 <FooterLink href="/jungimker">Jungimker</FooterLink>
                 <FooterLink href="/leihgeraete">Leihgeräte</FooterLink>
-                <FooterLink href="/termine">Termine & Kurse</FooterLink>
+                <FooterLink href="/termine">Termine</FooterLink>
                 <FooterLink href="/downloads">Downloads</FooterLink>
                 <FooterLink href="/kontakt">Kontakt</FooterLink>
                 <FooterLink href="/zum-honig">Zum Honig</FooterLink>
