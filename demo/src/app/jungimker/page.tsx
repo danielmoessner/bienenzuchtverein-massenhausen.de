@@ -8,8 +8,7 @@ export default function Page() {
     <>
       <HeroLeftAlignedWithPhoto
         id="hero"
-        eyebrow="Kurs für Anfänger in der Imkerei"
-        headline="Imker werden"
+        headline="Jungimker Kurs"
         subheadline={
           <>
             <p>
