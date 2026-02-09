@@ -72,7 +72,7 @@ export default function Page() {
             />
           }
           name="Markus Besl"
-          byline="2. Vorstand"
+          byline="2. Vorstand & Leihgeräte"
           phone="08165 981939"
         />
         <TeamMember
@@ -85,7 +85,7 @@ export default function Page() {
             />
           }
           name="Helmut Eckert"
-          byline="Kassierer"
+          byline="Kassierer &amp; Beiträge"
         />
         <TeamMember
           img={
@@ -97,7 +97,7 @@ export default function Page() {
             />
           }
           name="Alexander Frenzel"
-          byline="Schriftführer"
+          byline="2. Vorstand &amp; Online-Auftritt &amp; Schriftführer"
           phone="08165 909632"
         />
       </TeamFourColumnGrid>

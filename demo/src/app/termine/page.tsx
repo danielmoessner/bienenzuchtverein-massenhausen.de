@@ -22,10 +22,21 @@ export default function Page() {
           {/* <p className="mt-4 text-base/7 text-honey-700 dark:text-honey-400">
             Derzeit sind keine Termine verfügbar. In Kürze finden Sie hier Informationen zu:
           </p> */}
-          <ul className="mt-6 space-y-3 text-base/7 text-honey-700 dark:text-honey-400">
-            <li className="flex gap-3">
-              <span className="text-honey-500">•</span>
-              <span>Neulingskurs Beginn 27. März 2026 (insgesamt 7 Termine)</span>
+          <ul className="mt-6 list-disc ml-6 space-y-3 text-base/7 text-honey-700 dark:text-honey-400">
+            <li>
+              6. März 2026, 19:00 Uhr, JHV im Hepting Massenhausen
+            </li>
+            <li className="">
+              <span>27. März 2026, Neulingskurs Beginn</span>
+              <ul className="ml-6 list-disc">
+                <li>27.03.2026 – Rechtsgrundlagen, Förderungen und alles rund ums Imkern</li>
+                <li>17.04.2026 – Ausrüstung und Beuten in der Imkerei, Standortwahl</li>
+                <li>08.05.2026 – Biologie der Biene</li>
+                <li>12.06.2026 – Ablegerbildung und Schwarmverhinderung</li>
+                <li>26.06.2026 – Varroa und Varroabehandlung</li>
+                <li>03.07.2026 – Fütterung und Futtermittel</li>
+                <li>17.07.2026 – Überblick übers Bienenjahr</li>
+              </ul>
             </li>
             {/* <li className="flex gap-3">
               <span className="text-honey-500">•</span>

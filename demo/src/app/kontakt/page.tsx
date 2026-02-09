@@ -20,10 +20,7 @@ export default function Page() {
             <h2 className="font-display text-2xl font-medium tracking-tight text-honey-950 dark:text-white">
               Bienenzuchtverein Massenhausen e.V.
             </h2>
-            <div className="mt-6 space-y-2 text-base/7 text-honey-700 dark:text-honey-400">
-              <p>
-                <strong className="text-honey-950 dark:text-white">1. Vorstand:</strong> Dr. Elke Frenzel
-              </p>
+            <div className="mt-8 space-y-2 text-base/7 text-honey-700 dark:text-honey-400">
               <p>
                 <strong className="text-honey-950 dark:text-white">E-Mail:</strong>{' '}
                 <a
@@ -32,6 +29,21 @@ export default function Page() {
                 >
                   info@bienenzuchtverein-massenhausen.de
                 </a>
+              </p>
+              <p className='mt-8'>
+                <strong className="text-honey-950 dark:text-white">1. Vorstand:</strong> Dr. Elke Frenzel <br />
+                <span className="ml-2 text-honey-700">08165 909632</span>
+              </p>
+              <p>
+                <strong className="text-honey-950 dark:text-white">2. Vorstand &amp; Online-Auftritt &amp; Schriftführer:</strong> Alexander Frenzel <br />
+                <span className="ml-2 text-honey-700">08165 909632</span>
+              </p>
+              <p>
+                <strong className="text-honey-950 dark:text-white">2. Vorstand &amp; Leihgeräte:</strong> Markus Besl <br />
+                <span className="ml-2 text-honey-700">08165 981939</span>
+              </p>
+              <p>
+                <strong className="text-honey-950 dark:text-white">Kassierer &amp; Beiträge:</strong> Helmut Eckert
               </p>
             </div>
           </div>
