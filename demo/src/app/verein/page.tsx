@@ -97,7 +97,7 @@ export default function Page() {
             />
           }
           name="Alexander Frenzel"
-          byline="2. Vorstand &amp; Online-Auftritt &amp; Schriftführer"
+          byline="Online-Auftritt &amp; Schriftführer"
           phone="08165 909632"
         />
       </TeamFourColumnGrid>

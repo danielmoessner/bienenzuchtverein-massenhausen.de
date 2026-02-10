@@ -35,12 +35,12 @@ export default function Page() {
                 <span className="ml-2 text-honey-700">08165 909632</span>
               </p>
               <p>
-                <strong className="text-honey-950 dark:text-white">2. Vorstand &amp; Online-Auftritt &amp; Schriftführer:</strong> Alexander Frenzel <br />
-                <span className="ml-2 text-honey-700">08165 909632</span>
-              </p>
-              <p>
                 <strong className="text-honey-950 dark:text-white">2. Vorstand &amp; Leihgeräte:</strong> Markus Besl <br />
                 <span className="ml-2 text-honey-700">08165 981939</span>
+              </p>
+              <p>
+                <strong className="text-honey-950 dark:text-white">Online-Auftritt &amp; Schriftführer:</strong> Alexander Frenzel <br />
+                <span className="ml-2 text-honey-700">08165 909632</span>
               </p>
               <p>
                 <strong className="text-honey-950 dark:text-white">Kassierer &amp; Beiträge:</strong> Helmut Eckert
