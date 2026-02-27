@@ -26,8 +26,11 @@ export default function Page() {
             <li>
               6. März 2026, 19:00 Uhr, JHV im Hepting Massenhausen
             </li>
+            <li>
+              14. März 2026, 08:30 Uhr bis 12:00, Aktion Ramadama - “Saubere Landschaft“, Treffpunkt: Feuerwehrhaus Massenhausen
+            </li>
             <li className="">
-              <span>27. März 2026, Neulingskurs Beginn</span>
+              <p className='leading-tight'>2026 Neulingskurs, jeweils um 19:00 Uhr im Gasthof Maisberger <br /><span className='italic text-sm'>mit Dr. Elke Frenzel (Bienenfachwart)</span></p>
               <ul className="ml-6 list-disc">
                 <li>27.03.2026 – Rechtsgrundlagen, Förderungen und alles rund ums Imkern</li>
                 <li>17.04.2026 – Ausrüstung und Beuten in der Imkerei, Standortwahl</li>
