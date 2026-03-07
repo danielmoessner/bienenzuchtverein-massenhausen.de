@@ -29,13 +29,13 @@ export default function Page() {
             <li>
               14. März 2026, 08:30 Uhr bis 12:00, Aktion Ramadama - “Saubere Landschaft“, Treffpunkt: Feuerwehrhaus Massenhausen
             </li>
-            <li>27.03.2026, 19:00 Uhr – Rechtsgrundlagen, Förderungen und alles rund ums Imkern im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
-            <li>17.04.2026, 19:00 Uhr – Ausrüstung und Beuten in der Imkerei, Standortwahl im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
-            <li>08.05.2026, 19:00 Uhr – Biologie der Biene im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
-            <li>12.06.2026, 19:00 Uhr – Ablegerbildung und Schwarmverhinderung im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
-            <li>26.06.2026, 19:00 Uhr – Varroa und Varroabehandlung im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
-            <li>03.07.2026, 19:00 Uhr – Fütterung und Futtermittel im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
-            <li>17.07.2026, 19:00 Uhr – Überblick übers Bienenjahr im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
+            <li>27.03.2026, 19:00 Uhr - Rechtsgrundlagen, Förderungen und alles rund ums Imkern im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
+            <li>17.04.2026, 19:00 Uhr - Ausrüstung und Beuten in der Imkerei, Standortwahl im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
+            <li>08.05.2026, 19:00 Uhr - Biologie der Biene im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
+            <li>12.06.2026, 19:00 Uhr - Ablegerbildung und Schwarmverhinderung im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
+            <li>26.06.2026, 19:00 Uhr - Varroa und Varroabehandlung im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
+            <li>03.07.2026, 19:00 Uhr - Fütterung und Futtermittel im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
+            <li>17.07.2026, 19:00 Uhr - Überblick übers Bienenjahr im Gasthof Maisberger <span className='italic text-sm'><br />(mit Dr. Elke Frenzel, Bienenfachwart)</span></li>
             {/* <li className="flex gap-3">
               <span className="text-honey-500">•</span>
               <span>Fachvorträge</span>
