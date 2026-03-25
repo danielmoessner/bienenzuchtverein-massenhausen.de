@@ -1,0 +1,60 @@
+name: Build and Deploy (SFTP)
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: deploy-sftp-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      SFTP_REMOTE_PATH: .
+      SFTP_PORT: "22"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: demo/package-lock.json
+
+      - name: Install dependencies
+        working-directory: demo
+        run: npm ci
+
+      - name: Build static site
+        working-directory: demo
+        run: npm run build
+
+      - name: Install lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Upload via SFTP
+        env:
+          SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${SFTP_SERVER}" || -z "${SFTP_USERNAME}" || -z "${SFTP_PASSWORD}" ]]; then
+            echo "Missing one of: SFTP_SERVER, SFTP_USERNAME, SFTP_PASSWORD (GitHub secrets)." >&2
+            exit 1
+          fi
+
+          echo "Deploying demo/out -> sftp://${SFTP_SERVER}:${SFTP_PORT}/${SFTP_REMOTE_PATH}"
+
+          lftp -u "${SFTP_USERNAME}","${SFTP_PASSWORD}" "sftp://${SFTP_SERVER}:${SFTP_PORT}" \
+            -e "set cmd:fail-exit yes; set net:max-retries 2; set net:timeout 20; set sftp:auto-confirm yes; mirror -R --verbose --parallel=2 demo/out \"${SFTP_REMOTE_PATH}\"; bye"
