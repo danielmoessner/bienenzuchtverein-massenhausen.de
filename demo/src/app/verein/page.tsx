@@ -51,7 +51,7 @@ export default function Page() {
       >
         <TeamMember
           img={
-            <img
+            <Image
               src="/placeholder-avatar.jpg"
               alt=""
               width={800}
@@ -61,10 +61,11 @@ export default function Page() {
           name="Dr. Elke Frenzel"
           byline="1. Vorstand"
           phone="08165 909632"
+          email="info@bienenzuchtverein-massenhausen.de"
         />
         <TeamMember
           img={
-            <img
+            <Image
               src="/placeholder-avatar.jpg"
               alt=""
               width={800}
@@ -74,10 +75,11 @@ export default function Page() {
           name="Markus Besl"
           byline="2. Vorstand & Leihgeräte"
           phone="08165 981939"
+          email="info@bienenzuchtverein-massenhausen.de"
         />
         <TeamMember
           img={
-            <img
+            <Image
               src="/placeholder-avatar.jpg"
               alt=""
               width={800}
@@ -86,10 +88,11 @@ export default function Page() {
           }
           name="Helmut Eckert"
           byline="Kassierer &amp; Beiträge"
+          email="info@bienenzuchtverein-massenhausen.de"
         />
         <TeamMember
           img={
-            <img
+            <Image
               src="/placeholder-avatar.jpg"
               alt=""
               width={800}
@@ -99,6 +102,7 @@ export default function Page() {
           name="Alexander Frenzel"
           byline="Online-Auftritt &amp; Schriftführer"
           phone="08165 909632"
+          email="info@bienenzuchtverein-massenhausen.de"
         />
       </TeamFourColumnGrid>
 
