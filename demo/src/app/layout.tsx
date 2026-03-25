@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import { ButtonLink } from '@/components/elements/button'
+import { CookieBanner } from '@/components/elements/cookie-banner'
 import { Main } from '@/components/elements/main'
 import {
   FooterLink,
@@ -103,6 +104,8 @@ export default function RootLayout({
             }
             fineprint="Bienenzuchtverein Massenhausen e.V. – Förderung der Imkerei und des Naturschutzes seit 1905."
           />
+
+          <CookieBanner />
         </>
       </body>
     </html>
