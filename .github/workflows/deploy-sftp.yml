@@ -26,14 +26,14 @@ jobs:
         with:
           node-version: "24"
           cache: npm
-          cache-dependency-path: demo/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: demo
+        working-directory: .
         run: npm ci
 
       - name: Build static site
-        working-directory: demo
+        working-directory: .
         run: npm run build
 
       - name: Install lftp
@@ -54,7 +54,7 @@ jobs:
             exit 1
           fi
 
-          echo "Deploying demo/out -> sftp://${SFTP_SERVER}:${SFTP_PORT}/${SFTP_REMOTE_PATH}"
+          echo "Deploying ./out -> sftp://${SFTP_SERVER}:${SFTP_PORT}/${SFTP_REMOTE_PATH}"
 
           lftp -u "${SFTP_USERNAME}","${SFTP_PASSWORD}" "sftp://${SFTP_SERVER}:${SFTP_PORT}" \
-            -e "set cmd:fail-exit yes; set net:max-retries 2; set net:timeout 20; set sftp:auto-confirm yes; mirror -R --verbose --parallel=2 demo/out \"${SFTP_REMOTE_PATH}\"; bye"
+            -e "set cmd:fail-exit yes; set net:max-retries 2; set net:timeout 20; set sftp:auto-confirm yes; mirror -R --verbose --parallel=2 ./out \"${SFTP_REMOTE_PATH}\"; bye"
