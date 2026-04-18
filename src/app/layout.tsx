@@ -3,10 +3,7 @@ import Image from 'next/image'
 import { ButtonLink } from '@/components/elements/button'
 import { CookieBanner } from '@/components/elements/cookie-banner'
 import { Main } from '@/components/elements/main'
-import {
-  FooterLink,
-  FooterWithLinksAndSocialIcons,
-} from '@/components/sections/footer-with-links-and-social-icons'
+import { FooterLink, FooterWithLinksAndSocialIcons } from '@/components/sections/footer-with-links-and-social-icons'
 import {
   NavbarLink,
   NavbarLogo,

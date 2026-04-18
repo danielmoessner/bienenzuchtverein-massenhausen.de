@@ -5,7 +5,7 @@ export default function Page() {
     <>
       <Section id="downloads">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 dark:text-white sm:text-5xl">
+          <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 sm:text-5xl dark:text-white">
             Downloads
           </h1>
           <p className="mt-6 text-lg/8 text-honey-700 dark:text-honey-400">
@@ -19,25 +19,18 @@ export default function Page() {
           <h2 className="font-display text-2xl font-medium tracking-tight text-honey-950 dark:text-white">
             Verfügbare Downloads
           </h2>
-          <p className="mt-4 text-base/7 text-honey-700 dark:text-honey-400">
-            Derzeit sind keine Downloads verfügbar. In Kürze finden Sie hier folgende Dokumente:
-          </p>
           <ul className="mt-6 space-y-3 text-base/7 text-honey-700 dark:text-honey-400">
             <li className="flex gap-3">
-              <span className="text-honey-500">•</span>
-              <span>Mitgliedsanmeldung</span>
+              <a target="_blank" href="/pdfs/beitrittserklaerung.pdf" className="flex gap-3">
+                <span className="text-honey-500">•</span>
+                <span className="underline">Beitrittserklärung</span>
+              </a>
             </li>
             <li className="flex gap-3">
-              <span className="text-honey-500">•</span>
-              <span>Satzung des Vereins</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-honey-500">•</span>
-              <span>Beitragsordnung</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-honey-500">•</span>
-              <span>Informationen zum Datenschutz</span>
+              <a target="_blank" href="/pdfs/datenschutzvereinbarung.pdf" className="flex gap-3">
+                <span className="text-honey-500">•</span>
+                <span className="underline">Datenschutzvereinbarung</span>
+              </a>
             </li>
           </ul>
         </div>

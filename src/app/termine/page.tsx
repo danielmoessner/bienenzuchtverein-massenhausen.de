@@ -6,7 +6,7 @@ export default function Page() {
     <>
       <Section id="termine">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 dark:text-white sm:text-5xl">
+          <h1 className="font-display text-4xl font-medium tracking-tight text-honey-950 sm:text-5xl dark:text-white">
             Termine
           </h1>
           <p className="mt-6 text-lg/8 text-honey-700 dark:text-honey-400">
