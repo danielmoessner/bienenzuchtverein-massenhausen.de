@@ -9,7 +9,7 @@ export default function Page() {
         headline="Seite nicht gefunden"
         subheadline={<p>Entschuldigung, die von Ihnen gesuchte Seite wurde nicht gefunden.</p>}
         cta={
-          <Link href="/">
+          <Link href="/" className="text-honey-700">
             Zurück zur Startseite <ArrowNarrowRightIcon />
           </Link>
         }
