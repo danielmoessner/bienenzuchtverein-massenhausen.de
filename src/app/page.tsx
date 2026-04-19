@@ -8,6 +8,7 @@ import { HeroLeftAlignedWithDemo } from '@/components/sections/hero-left-aligned
 import { Stat, StatsWithGraph } from '@/components/sections/stats-with-graph'
 import Image from 'next/image'
 import Link from 'next/link'
+import { UpcomingTermineList } from './termine/upcoming-termine-list'
 
 export default function Page() {
   return (
@@ -58,12 +59,7 @@ export default function Page() {
                   Nächsten Termine
                 </Link>
               }
-              subheadline={
-                <ul>
-                  <li>6. März 2026, 19:00 Uhr, JHV im Hepting Massenhausen</li>
-                  <li>Neulingskurs Beginn 27. März 2026 (insgesamt 7 Termine)</li>
-                </ul>
-              }
+              subheadline={<UpcomingTermineList count={2} />}
               cta={<ButtonLink href="/termine">Zu allen Terminen</ButtonLink>}
             />
 
