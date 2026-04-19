@@ -41,6 +41,13 @@ export const termine: Termin[] = [
     person: 'Dr. Elke Frenzel, Bienenfachwart',
   },
   {
+    date: new Date(2026, 4, 13),
+    time: '19:00 Uhr',
+    name: 'Bienenstammtisch',
+    ort: 'Gasthof Hepting in Massenhausen',
+    // person: 'Offener Austausch für alle Imker – von Anfängern bis zu erfahrenen Bienenhaltern',
+  },
+  {
     date: new Date(2026, 5, 12),
     time: '19:00 Uhr',
     name: 'Ablegerbildung und Schwarmverhinderung',
