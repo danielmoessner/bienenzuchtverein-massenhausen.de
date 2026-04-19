@@ -1,29 +1,18 @@
 Options -MultiViews
 DirectorySlash Off
 
-<IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteBase /
+RewriteEngine On
+RewriteBase /
 
-    # Home
-    RewriteRule ^$ index.html [L]
+RewriteRule ^$ index.html [L]
 
-    # Next.js static export generates both folders (e.g. /datenschutz/)
-    # and flat HTML files (e.g. /datenschutz.html). When a folder exists,
-    # Apache would otherwise redirect /datenschutz -> /datenschutz/ (DirectorySlash)
-    # and then fail because there is no index.html. This rule maps clean URLs
-    # (with or without trailing slash) to the corresponding .html file.
-    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-    RewriteRule ^(.+?)/?$ $1.html [L]
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
 
-    # Serve existing files/directories as-is (assets, _next, images, etc.)
-    RewriteCond %{REQUEST_FILENAME} -f [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^ - [L]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-    # Otherwise return a proper 404 (and let ErrorDocument render the page)
-    RewriteRule ^ - [R=404,L]
-
-</IfModule>
+RewriteRule ^ - [R=404,L]
 
 ErrorDocument 404 /404.html
