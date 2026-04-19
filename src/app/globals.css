@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-display: 'Instrument Serif', serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: var(--font-instrument-serif), serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
 
   --color-honey-50: oklch(98.8% 0.015 95);
   --color-honey-100: oklch(96.6% 0.025 95);

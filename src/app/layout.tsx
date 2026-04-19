@@ -1,3 +1,4 @@
+import { Instrument_Serif, Inter } from 'next/font/google'
 import Image from 'next/image'
 
 import { ButtonLink } from '@/components/elements/button'
@@ -12,6 +13,20 @@ import {
 import type { Metadata } from 'next'
 import './globals.css'
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-instrument-serif',
+  weight: ['400'],
+  style: ['normal', 'italic'],
+})
+
 export const metadata: Metadata = {
   title: 'Bienenzuchtverein Massenhausen',
   description:
@@ -24,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="de">
+    <html lang="de" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <head>
         <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -32,14 +47,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="BZV" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body>
         <>
