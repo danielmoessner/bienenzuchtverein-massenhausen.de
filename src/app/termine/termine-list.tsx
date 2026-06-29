@@ -22,8 +22,7 @@ export function TermineList() {
             {formatTerminDateNumeric(termin.date)}, {termin.time} - {termin.name}, {termin.ort}
             {termin.person ? (
               <span className="text-sm italic">
-                <br />
-                (mit {termin.person})
+                <br />({termin.person})
               </span>
             ) : null}
           </>
@@ -31,7 +30,7 @@ export function TermineList() {
 
         return (
           <li key={`${termin.date.toISOString()}-${termin.time}-${termin.name}`}>
-            {isOlderThanOneDay ? <s>{content}</s> : content}
+            {isOlderThanOneDay ? <span>{content}</span> : content}
           </li>
         )
       })}
