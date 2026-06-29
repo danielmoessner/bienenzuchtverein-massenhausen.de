@@ -109,6 +109,60 @@ export default function Page() {
               }
             />
 
+            <Feature
+              headline="Bio-Imkerei Willing"
+              subheadline={
+                <p>
+                  In unserer seit 2013 bestehenden Imkerei betreuen und pflegen wir derzeit 85 Bienenvölker hier bei uns
+                  am Standort in Hallbergmoos und im Raum Freising. Wir verarbeiten ausschließlich aus den eigenen
+                  Bienenvölkern Honig, Pollen, Propolis und das Bienenwachs. Seit 2022 sind wir eine
+                  Bioland-Zertifizierte Imkerei.
+                </p>
+              }
+              cta={
+                <div className="flex flex-col gap-2 text-sm">
+                  <p className="text-honey-950 dark:text-white">
+                    <strong>Kontakt</strong>
+                  </p>
+                  <p className="text-honey-700 dark:text-honey-400">
+                    Website:{' '}
+                    <a
+                      href="https://www.imkerei-willing.de/"
+                      target="_blank"
+                      className="underline hover:text-honey-950 dark:hover:text-white"
+                    >
+                      imkerei-willing.de
+                    </a>
+                  </p>
+                  <p className="text-honey-700 dark:text-honey-400">
+                    Email:{' '}
+                    <a
+                      href="mailto:info@imkerei-willing.de"
+                      className="underline hover:text-honey-950 dark:hover:text-white"
+                    >
+                      info@imkerei-willing.de
+                    </a>
+                  </p>
+                  <p className="text-honey-700 dark:text-honey-400">
+                    Telefon:{' '}
+                    <a href="tel:081189949954" className="underline hover:text-honey-950 dark:hover:text-white">
+                      0811 89949954
+                    </a>
+                  </p>
+                  <p className="text-honey-700 dark:text-honey-400">Adresse: Ludwigstraße 8, 85399 Hallbergmoos</p>
+                </div>
+              }
+              demo={
+                <Image
+                  src="/honig/willing.webp"
+                  alt="Bio-Imkerei Willing"
+                  width={900}
+                  height={900}
+                  className="h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
+                />
+              }
+            />
+
             {/* <Feature
               headline="Waldhonig"
               subheadline={
