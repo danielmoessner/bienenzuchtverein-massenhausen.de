@@ -1,3 +1,5 @@
+'use client'
+
 import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 import {
@@ -7,8 +9,136 @@ import {
 import { HeroLeftAlignedWithPhoto } from '@/components/sections/hero-left-aligned-with-photo'
 import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
 import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 
 export default function Page() {
+  const featuresContainerRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    const parent = featuresContainerRef.current
+    if (!parent) return
+
+    const items = Array.from(parent.children)
+    const randomIndex = (maxExclusive: number) => {
+      const randomBuffer = new Uint32Array(1)
+      crypto.getRandomValues(randomBuffer)
+      return randomBuffer[0] % maxExclusive
+    }
+
+    // Fisher-Yates shuffle via DOM operations to randomize order on each load.
+    for (let i = items.length - 1; i > 0; i -= 1) {
+      const j = randomIndex(i + 1)
+      ;[items[i], items[j]] = [items[j], items[i]]
+    }
+
+    for (const item of items) {
+      parent.appendChild(item)
+    }
+  }, [])
+
+  const shuffledFeatures = [
+    <Feature
+      key="imkerei-frenzel"
+      headline="Imkerei Frenzel"
+      subheadline={
+        <p>
+          Wir betreiben unsere Imkerei mit der Carnica Biene. Dabei ist unser Ziel, im Einklang mit der Natur
+          hochwertige Bienenprodukte zu gewinnen. Unsere Bienen sind dabei nicht nur Mittel zum Zweck sondern der
+          wichtigste Teil unserer Imkerei.
+        </p>
+      }
+      cta={
+        <div className="flex flex-col gap-2 text-sm">
+          <p className="text-honey-950 dark:text-white">
+            <strong>Kontakt</strong>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Website:{' '}
+            <a
+              href="https://www.imkerei-frenzel.de/"
+              target="_blank"
+              className="underline hover:text-honey-950 dark:hover:text-white"
+            >
+              imkerei-frenzel.de
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Email:{' '}
+            <a href="mailto:info@imkerei-frenzel.de" className="underline hover:text-honey-950 dark:hover:text-white">
+              info@imkerei-frenzel.de
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Telefon:{' '}
+            <a href="tel:08165909632" className="underline hover:text-honey-950 dark:hover:text-white">
+              08165 909632
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">Adresse: Mohnweg 18, 85375 Neufahrn</p>
+        </div>
+      }
+      demo={
+        <Image
+          src="/honig/frenzel.jpg"
+          alt="Imkerei Frenzel"
+          width={900}
+          height={900}
+          className="h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
+        />
+      }
+    />,
+    <Feature
+      key="bio-imkerei-willing"
+      headline="Bio-Imkerei Willing"
+      subheadline={
+        <p>
+          In unserer seit 2013 bestehenden Imkerei betreuen und pflegen wir derzeit 85 Bienenvölker hier bei uns am
+          Standort in Hallbergmoos und im Raum Freising. Wir verarbeiten ausschließlich aus den eigenen Bienenvölkern
+          Honig, Pollen, Propolis und das Bienenwachs. Seit 2022 sind wir eine Bioland-Zertifizierte Imkerei.
+        </p>
+      }
+      cta={
+        <div className="flex flex-col gap-2 text-sm">
+          <p className="text-honey-950 dark:text-white">
+            <strong>Kontakt</strong>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Website:{' '}
+            <a
+              href="https://www.imkerei-willing.de/"
+              target="_blank"
+              className="underline hover:text-honey-950 dark:hover:text-white"
+            >
+              imkerei-willing.de
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Email:{' '}
+            <a href="mailto:info@imkerei-willing.de" className="underline hover:text-honey-950 dark:hover:text-white">
+              info@imkerei-willing.de
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Telefon:{' '}
+            <a href="tel:081189949954" className="underline hover:text-honey-950 dark:hover:text-white">
+              0811 89949954
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">Adresse: Ludwigstraße 8, 85399 Hallbergmoos</p>
+        </div>
+      }
+      demo={
+        <Image
+          src="/honig/willing.webp"
+          alt="Bio-Imkerei Willing"
+          width={900}
+          height={900}
+          className="h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
+        />
+      }
+    />,
+  ]
+
   return (
     <>
       <HeroLeftAlignedWithPhoto
@@ -55,160 +185,9 @@ export default function Page() {
           </p>
         }
         features={
-          <>
-            <Feature
-              headline="Imkerei Frenzel"
-              subheadline={
-                <p>
-                  Wir betreiben unsere Imkerei mit der Carnica Biene. Dabei ist unser Ziel, im Einklang mit der Natur
-                  hochwertige Bienenprodukte zu gewinnen. Unsere Bienen sind dabei nicht nur Mittel zum Zweck sondern
-                  der wichtigste Teil unserer Imkerei.
-                </p>
-              }
-              cta={
-                <div className="flex flex-col gap-2 text-sm">
-                  <p className="text-honey-950 dark:text-white">
-                    <strong>Kontakt</strong>
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">
-                    Website:{' '}
-                    <a
-                      href="https://www.imkerei-frenzel.de/"
-                      target="_blank"
-                      className="underline hover:text-honey-950 dark:hover:text-white"
-                    >
-                      imkerei-frenzel.de
-                    </a>
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">
-                    Email:{' '}
-                    <a
-                      href="mailto:info@imkerei-frenzel.de"
-                      className="underline hover:text-honey-950 dark:hover:text-white"
-                    >
-                      info@imkerei-frenzel.de
-                    </a>
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">
-                    Telefon:{' '}
-                    <a href="tel:08165909632" className="underline hover:text-honey-950 dark:hover:text-white">
-                      08165 909632
-                    </a>
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">Adresse: Mohnweg 18, 85375 Neufahrn</p>
-                </div>
-              }
-              demo={
-                <Image
-                  src="/honig/frenzel.jpg"
-                  alt="Imkerei Frenzel"
-                  width={900}
-                  height={900}
-                  className="h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
-                />
-              }
-            />
-
-            <Feature
-              headline="Bio-Imkerei Willing"
-              subheadline={
-                <p>
-                  In unserer seit 2013 bestehenden Imkerei betreuen und pflegen wir derzeit 85 Bienenvölker hier bei uns
-                  am Standort in Hallbergmoos und im Raum Freising. Wir verarbeiten ausschließlich aus den eigenen
-                  Bienenvölkern Honig, Pollen, Propolis und das Bienenwachs. Seit 2022 sind wir eine
-                  Bioland-Zertifizierte Imkerei.
-                </p>
-              }
-              cta={
-                <div className="flex flex-col gap-2 text-sm">
-                  <p className="text-honey-950 dark:text-white">
-                    <strong>Kontakt</strong>
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">
-                    Website:{' '}
-                    <a
-                      href="https://www.imkerei-willing.de/"
-                      target="_blank"
-                      className="underline hover:text-honey-950 dark:hover:text-white"
-                    >
-                      imkerei-willing.de
-                    </a>
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">
-                    Email:{' '}
-                    <a
-                      href="mailto:info@imkerei-willing.de"
-                      className="underline hover:text-honey-950 dark:hover:text-white"
-                    >
-                      info@imkerei-willing.de
-                    </a>
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">
-                    Telefon:{' '}
-                    <a href="tel:081189949954" className="underline hover:text-honey-950 dark:hover:text-white">
-                      0811 89949954
-                    </a>
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">Adresse: Ludwigstraße 8, 85399 Hallbergmoos</p>
-                </div>
-              }
-              demo={
-                <Image
-                  src="/honig/willing.webp"
-                  alt="Bio-Imkerei Willing"
-                  width={900}
-                  height={900}
-                  className="h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
-                />
-              }
-            />
-
-            {/* <Feature
-              headline="Waldhonig"
-              subheadline={
-                <p>
-                  Kräftiger, aromatischer Waldhonig mit würzigem Geschmack. Reich an Mineralstoffen und Spurenelementen.
-                </p>
-              }
-              cta={
-                <div className="flex flex-col gap-2 text-sm">
-                  <p className="text-honey-950 dark:text-white">
-                    <strong>Kontakt:</strong> Maria Müller
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">Email: maria.mueller@example.com</p>
-                  <p className="text-honey-700 dark:text-honey-400">Tel: 08165 / 123456</p>
-                </div>
-              }
-              demo={<div className="aspect-4/3 rounded-lg bg-honey-300/20 dark:bg-honey-700/20" />}
-            /> */}
-
-            {/* <Feature
-              headline="Sommertracht"
-              subheadline={
-                <p>
-                  Goldener Sommerhonig mit blumigem Aroma. Gesammelt aus der Sommerblüte für einen besonders feinen
-                  Geschmack.
-                </p>
-              }
-              cta={
-                <div className="flex flex-col gap-2 text-sm">
-                  <p className="text-honey-950 dark:text-white">
-                    <strong>Kontakt:</strong> Hans Schmidt
-                  </p>
-                  <p className="text-honey-700 dark:text-honey-400">
-                    Website:{' '}
-                    <a
-                      href="https://imkerei-beispiel.de"
-                      className="underline hover:text-honey-950 dark:hover:text-white"
-                    >
-                      imkerei-beispiel.de
-                    </a>
-                  </p>
-                </div>
-              }
-              demo={<div className="aspect-4/3 rounded-lg bg-honey-300/20 dark:bg-honey-700/20" />}
-            /> */}
-          </>
+          <div className="grid grid-cols-1 gap-6" ref={featuresContainerRef}>
+            {shuffledFeatures}
+          </div>
         }
       />
 
