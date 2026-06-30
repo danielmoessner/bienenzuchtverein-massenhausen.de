@@ -9,184 +9,72 @@ import {
 import { HeroLeftAlignedWithPhoto } from '@/components/sections/hero-left-aligned-with-photo'
 import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
+import { useEffect, useState } from 'react'
+
+type ImkereiContent = {
+  name: string
+  text: string
+  website: string
+  email: string
+  telefon: string
+  adresse: string
+  imageSrc: string
+}
+
+const imkereiContent: ImkereiContent[] = [
+  {
+    name: 'Imkerei Frenzel',
+    text: 'Wir betreiben unsere Imkerei mit der Carnica Biene. Dabei ist unser Ziel, im Einklang mit der Natur hochwertige Bienenprodukte zu gewinnen. Unsere Bienen sind dabei nicht nur Mittel zum Zweck sondern der wichtigste Teil unserer Imkerei.',
+    website: 'https://www.imkerei-frenzel.de',
+    email: 'info@imkerei-frenzel.de',
+    telefon: '08165 909632',
+    adresse: 'Mohnweg 18, 85375 Neufahrn',
+    imageSrc: '/honig/frenzel.jpg',
+  },
+  {
+    name: 'Bio-Imkerei Willing',
+    text: 'In unserer seit 2013 bestehenden Imkerei betreuen und pflegen wir derzeit 85 Bienenvölker hier bei uns am Standort in Hallbergmoos und im Raum Freising. Wir verarbeiten ausschließlich aus den eigenen Bienenvölkern Honig, Pollen, Propolis und das Bienenwachs. Seit 2022 sind wir eine Bioland-Zertifizierte Imkerei.',
+    website: 'https://www.imkerei-willing.de',
+    email: 'info@imkerei-willing.de',
+    telefon: '0811 89949954',
+    adresse: 'Ludwigstraße 8, 85399 Hallbergmoos',
+    imageSrc: '/honig/willing.webp',
+  },
+  {
+    name: 'Imkerei Eckert',
+    text: 'Wir betreiben unsere kleine Hobby Imkerei in Pulling und ernten dort besten Honig aus Wald und der Isarau. Den Honig bekommt ihr direkt bei mir und auch in unserem Honig Kasterl direkt am Gartenzaun.',
+    website: 'https://imkerei-eckert.org',
+    email: 'imkerei-eckert@gmx.de',
+    telefon: '0160 5203653',
+    adresse: 'Dürnecker Strasse 8, 85354 Freising-Pulling',
+    imageSrc: '/honig/eckert.jpeg',
+  },
+]
 
 export default function Page() {
-  const featuresContainerRef = useRef<HTMLDivElement | null>(null)
+  const [shuffledImkereien, setShuffledImkereien] = useState<ImkereiContent[]>(imkereiContent)
 
   useEffect(() => {
-    const parent = featuresContainerRef.current
-    if (!parent) return
-
-    const items = Array.from(parent.children)
     const randomIndex = (maxExclusive: number) => {
       const randomBuffer = new Uint32Array(1)
       crypto.getRandomValues(randomBuffer)
       return randomBuffer[0] % maxExclusive
     }
 
-    // Fisher-Yates shuffle via DOM operations to randomize order on each load.
-    for (let i = items.length - 1; i > 0; i -= 1) {
+    const shuffled = [...imkereiContent]
+    for (let i = shuffled.length - 1; i > 0; i -= 1) {
       const j = randomIndex(i + 1)
-      ;[items[i], items[j]] = [items[j], items[i]]
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
     }
 
-    for (const item of items) {
-      parent.appendChild(item)
+    const timeoutId = window.setTimeout(() => {
+      setShuffledImkereien(shuffled)
+    }, 0)
+
+    return () => {
+      window.clearTimeout(timeoutId)
     }
   }, [])
-
-  const shuffledFeatures = [
-    <Feature
-      key="imkerei-frenzel"
-      headline="Imkerei Frenzel"
-      subheadline={
-        <p>
-          Wir betreiben unsere Imkerei mit der Carnica Biene. Dabei ist unser Ziel, im Einklang mit der Natur
-          hochwertige Bienenprodukte zu gewinnen. Unsere Bienen sind dabei nicht nur Mittel zum Zweck sondern der
-          wichtigste Teil unserer Imkerei.
-        </p>
-      }
-      cta={
-        <div className="flex flex-col gap-2 text-sm">
-          <p className="text-honey-950 dark:text-white">
-            <strong>Kontakt</strong>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Website:{' '}
-            <a
-              href="https://www.imkerei-frenzel.de/"
-              target="_blank"
-              className="underline hover:text-honey-950 dark:hover:text-white"
-            >
-              imkerei-frenzel.de
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Email:{' '}
-            <a href="mailto:info@imkerei-frenzel.de" className="underline hover:text-honey-950 dark:hover:text-white">
-              info@imkerei-frenzel.de
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Telefon:{' '}
-            <a href="tel:08165909632" className="underline hover:text-honey-950 dark:hover:text-white">
-              08165 909632
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">Adresse: Mohnweg 18, 85375 Neufahrn</p>
-        </div>
-      }
-      demo={
-        <Image
-          src="/honig/frenzel.jpg"
-          alt="Imkerei Frenzel"
-          width={900}
-          height={900}
-          className="h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
-        />
-      }
-    />,
-    <Feature
-      key="bio-imkerei-willing"
-      headline="Bio-Imkerei Willing"
-      subheadline={
-        <p>
-          In unserer seit 2013 bestehenden Imkerei betreuen und pflegen wir derzeit 85 Bienenvölker hier bei uns am
-          Standort in Hallbergmoos und im Raum Freising. Wir verarbeiten ausschließlich aus den eigenen Bienenvölkern
-          Honig, Pollen, Propolis und das Bienenwachs. Seit 2022 sind wir eine Bioland-Zertifizierte Imkerei.
-        </p>
-      }
-      cta={
-        <div className="flex flex-col gap-2 text-sm">
-          <p className="text-honey-950 dark:text-white">
-            <strong>Kontakt</strong>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Website:{' '}
-            <a
-              href="https://www.imkerei-willing.de/"
-              target="_blank"
-              className="underline hover:text-honey-950 dark:hover:text-white"
-            >
-              imkerei-willing.de
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Email:{' '}
-            <a href="mailto:info@imkerei-willing.de" className="underline hover:text-honey-950 dark:hover:text-white">
-              info@imkerei-willing.de
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Telefon:{' '}
-            <a href="tel:081189949954" className="underline hover:text-honey-950 dark:hover:text-white">
-              0811 89949954
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">Adresse: Ludwigstraße 8, 85399 Hallbergmoos</p>
-        </div>
-      }
-      demo={
-        <Image
-          src="/honig/willing.webp"
-          alt="Bio-Imkerei Willing"
-          width={900}
-          height={900}
-          className="h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
-        />
-      }
-    />,
-    <Feature
-      key="imkerei-eckert"
-      headline="Imkerei Eckert"
-      subheadline={
-        <p>
-          Wir betreiben unsere kleine Hobby Imkerei in Pulling und ernten dort besten Honig aus Wald und der Isarau. Den
-          Honig bekommt ihr direkt bei mir und auch in unserem Honig Kasterl direkt am Gartenzaun.
-        </p>
-      }
-      cta={
-        <div className="flex flex-col gap-2 text-sm">
-          <p className="text-honey-950 dark:text-white">
-            <strong>Kontakt</strong>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Website:{' '}
-            <a
-              href="https://imkerei-eckert.org"
-              target="_blank"
-              className="underline hover:text-honey-950 dark:hover:text-white"
-            >
-              imkerei-eckert.org
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Email:{' '}
-            <a href="mailto:imkerei-eckert@gmx.de" className="underline hover:text-honey-950 dark:hover:text-white">
-              imkerei-eckert@gmx.de
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">
-            Telefon:{' '}
-            <a href="tel:01605203653" className="underline hover:text-honey-950 dark:hover:text-white">
-              0160 5203653
-            </a>
-          </p>
-          <p className="text-honey-700 dark:text-honey-400">Adresse: Dürnecker Strasse 8, 85354 Freising-Pulling</p>
-        </div>
-      }
-      demo={
-        <Image
-          src="/honig/eckert.jpeg"
-          alt="Imkerei Eckert"
-          width={900}
-          height={900}
-          className="aspect-square h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
-        />
-      }
-    />,
-  ]
 
   return (
     <>
@@ -234,9 +122,61 @@ export default function Page() {
           </p>
         }
         features={
-          <div className="grid grid-cols-1 gap-6" ref={featuresContainerRef}>
-            {shuffledFeatures}
-          </div>
+          <>
+            {shuffledImkereien.map((imkerei) => (
+              <Feature
+                key={imkerei.name}
+                headline={imkerei.name}
+                subheadline={<p>{imkerei.text}</p>}
+                cta={
+                  <div className="flex flex-col gap-2 text-sm">
+                    <p className="text-honey-950 dark:text-white">
+                      <strong>Kontakt</strong>
+                    </p>
+                    <p className="text-honey-700 dark:text-honey-400">
+                      Website:{' '}
+                      <a
+                        href={imkerei.website}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline hover:text-honey-950 dark:hover:text-white"
+                      >
+                        {imkerei.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                      </a>
+                    </p>
+                    <p className="text-honey-700 dark:text-honey-400">
+                      Email:{' '}
+                      <a
+                        href={`mailto:${imkerei.email}`}
+                        className="underline hover:text-honey-950 dark:hover:text-white"
+                      >
+                        {imkerei.email}
+                      </a>
+                    </p>
+                    <p className="text-honey-700 dark:text-honey-400">
+                      Telefon:{' '}
+                      <a
+                        href={`tel:${imkerei.telefon.replace(/\s+/g, '')}`}
+                        className="underline hover:text-honey-950 dark:hover:text-white"
+                      >
+                        {imkerei.telefon}
+                      </a>
+                    </p>
+                    <p className="text-honey-700 dark:text-honey-400">Adresse: {imkerei.adresse}</p>
+                  </div>
+                }
+                demo={
+                  <Image
+                    src={imkerei.imageSrc}
+                    alt={imkerei.name}
+                    width={900}
+                    height={900}
+                    className="aspect-square h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
+                  />
+                }
+              />
+            ))}
+          </>
         }
       />
 
