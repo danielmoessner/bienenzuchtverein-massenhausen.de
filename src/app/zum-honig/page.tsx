@@ -137,6 +137,55 @@ export default function Page() {
         />
       }
     />,
+    <Feature
+      key="imkerei-eckert"
+      headline="Imkerei Eckert"
+      subheadline={
+        <p>
+          Wir betreiben unsere kleine Hobby Imkerei in Pulling und ernten dort besten Honig aus Wald und der Isarau. Den
+          Honig bekommt ihr direkt bei mir und auch in unserem Honig Kasterl direkt am Gartenzaun.
+        </p>
+      }
+      cta={
+        <div className="flex flex-col gap-2 text-sm">
+          <p className="text-honey-950 dark:text-white">
+            <strong>Kontakt</strong>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Website:{' '}
+            <a
+              href="https://imkerei-eckert.org"
+              target="_blank"
+              className="underline hover:text-honey-950 dark:hover:text-white"
+            >
+              imkerei-eckert.org
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Email:{' '}
+            <a href="mailto:imkerei-eckert@gmx.de" className="underline hover:text-honey-950 dark:hover:text-white">
+              imkerei-eckert@gmx.de
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">
+            Telefon:{' '}
+            <a href="tel:01605203653" className="underline hover:text-honey-950 dark:hover:text-white">
+              0160 5203653
+            </a>
+          </p>
+          <p className="text-honey-700 dark:text-honey-400">Adresse: Dürnecker Strasse 8, 85354 Freising-Pulling</p>
+        </div>
+      }
+      demo={
+        <Image
+          src="/honig/eckert.jpeg"
+          alt="Imkerei Eckert"
+          width={900}
+          height={900}
+          className="aspect-square h-full rounded-lg bg-honey-300/20 object-cover dark:bg-honey-700/20"
+        />
+      }
+    />,
   ]
 
   return (
