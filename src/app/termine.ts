@@ -34,7 +34,7 @@ export const termine: Termin[] = [
     person: 'Fachwart: Dr. Elke Frenzel',
   },
   {
-    date: new Date(2026, 4, 8),
+    date: new Date(2026, 3, 30),
     time: '19:00 Uhr',
     name: 'BIOLOGIE - Biologie der Biene',
     ort: 'Gasthof Maisberger',
@@ -54,21 +54,21 @@ export const termine: Termin[] = [
     ort: 'Gasthof Hepting in Massenhausen',
   },
   {
-    date: new Date(2026, 5, 12),
+    date: new Date(2026, 4, 8),
     time: '19:00 Uhr',
     name: 'JUNGVOLKBILDUNG - Ableger- und Kunstschwarmbildung',
     ort: 'Gasthof Maisberger',
     person: 'Fachwart: Dr. Elke Frenzel',
   },
   {
-    date: new Date(2026, 5, 26),
+    date: new Date(2026, 5, 12),
     time: '19:00 Uhr',
     name: 'VARROABEKÄMPFUNG - Varroa und Varroabehandlung',
     ort: 'Gasthof Maisberger',
     person: 'Bienensachverständiger: Markus Besl',
   },
   {
-    date: new Date(2026, 6, 3),
+    date: new Date(2026, 5, 26),
     time: '19:00 Uhr',
     name: 'EINWINTERUNG - Fütterung und Futtermittel',
     ort: 'Gasthof Maisberger',
