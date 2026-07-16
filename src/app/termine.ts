@@ -41,6 +41,13 @@ export const termine: Termin[] = [
     person: 'Fachwart: Dr. Elke Frenzel',
   },
   {
+    date: new Date(2026, 4, 8),
+    time: '19:00 Uhr',
+    name: 'JUNGVOLKBILDUNG - Ableger- und Kunstschwarmbildung',
+    ort: 'Gasthof Maisberger',
+    person: 'Fachwart: Dr. Elke Frenzel',
+  },
+  {
     date: new Date(2026, 4, 13),
     time: '19:00 Uhr',
     name: 'Bienenstammtisch',
@@ -52,13 +59,6 @@ export const termine: Termin[] = [
     time: '19:00 Uhr',
     name: 'Bienenstammtisch',
     ort: 'Gasthof Hepting in Massenhausen',
-  },
-  {
-    date: new Date(2026, 4, 8),
-    time: '19:00 Uhr',
-    name: 'JUNGVOLKBILDUNG - Ableger- und Kunstschwarmbildung',
-    ort: 'Gasthof Maisberger',
-    person: 'Fachwart: Dr. Elke Frenzel',
   },
   {
     date: new Date(2026, 5, 12),
