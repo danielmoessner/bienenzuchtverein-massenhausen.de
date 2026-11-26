@@ -112,6 +112,12 @@ export const termine: Termin[] = [
     ort: 'Ehemalige Radarstation',
   },
   {
+    date: new Date(2026, 10, 20),
+    time: '19:30 Uhr',
+    name: 'Herbstversammlung des Bienenzuchtvereins Massenhausen',
+    ort: 'Gasthof Maisberger in Neufahrn',
+  },
+  {
     date: new Date(2026, 11, 4),
     time: '19:00 Uhr',
     name: 'Bienenstammtisch',
