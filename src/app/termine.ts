@@ -87,4 +87,34 @@ export const termine: Termin[] = [
     ort: 'Gasthof Maisberger',
     person: 'Fachwart: Dr. Elke Frenzel',
   },
+  {
+    date: new Date(2026, 7, 6),
+    time: '19:00 Uhr',
+    name: 'Bienenstammtisch',
+    ort: 'Gasthof Hepting in Massenhausen',
+  },
+  {
+    date: new Date(2026, 8, 11),
+    time: '19:00 Uhr',
+    name: 'Bienenstammtisch',
+    ort: 'Gasthof Hepting in Massenhausen',
+  },
+  {
+    date: new Date(2026, 9, 2),
+    time: '19:00 Uhr',
+    name: 'Bienenstammtisch',
+    ort: 'Gasthof Hepting in Massenhausen',
+  },
+  {
+    date: new Date(2026, 10, 14),
+    time: 'ab 9:00 Uhr',
+    name: 'Arbeitstreffen Radarstation',
+    ort: 'Ehemalige Radarstation',
+  },
+  {
+    date: new Date(2026, 11, 4),
+    time: '19:00 Uhr',
+    name: 'Bienenstammtisch',
+    ort: 'Gasthof Hepting in Massenhausen',
+  },
 ]
