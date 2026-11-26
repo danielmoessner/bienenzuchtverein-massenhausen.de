@@ -17,9 +17,6 @@ export default function Page() {
 
       <Section id="termine-list">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-display text-2xl font-medium tracking-tight text-honey-950 dark:text-white">
-            Kommende Termine
-          </h2>
           <TermineList />
         </div>
       </Section>
